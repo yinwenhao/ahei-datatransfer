@@ -1,6 +1,6 @@
-package com.when_how.datatransfer.kafka;
+package com.ahei.datatransfer.compress;
 
-import com.when_how.datatransfer.util.GZipUtils;
+import com.ahei.datatransfer.util.GZipUtils;
 
 import kafka.serializer.Decoder;
 

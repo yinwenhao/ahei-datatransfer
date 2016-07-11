@@ -1,13 +1,20 @@
-package com.when_how.datatransfer.kafka;
+package test.kafka;
 
 import java.util.Date;
 
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-public class Test {
+import com.ahei.datatransfer.kafka.DataProducerImpl;
+import com.ahei.datatransfer.kafka.KafkaMessageSender;
+
+public class ProducerTest {
 
 	public static void main(String[] args) {
 		ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("classpath:spring-main.xml");
+		
+		KafkaMessageSender aa = (KafkaMessageSender) context.getBean("kafkaMessageSender");
+		System.out.println(aa);
+		
 		DataProducerImpl kafkaProducer = context.getBean(DataProducerImpl.class);
 		int events = 15;
 		// 产生并发送消息

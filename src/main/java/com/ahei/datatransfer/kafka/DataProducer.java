@@ -1,4 +1,4 @@
-package com.when_how.datatransfer.kafka;
+package com.ahei.datatransfer.kafka;
 
 public interface DataProducer {
 
