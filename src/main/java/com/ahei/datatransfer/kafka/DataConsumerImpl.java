@@ -46,7 +46,8 @@ public class DataConsumerImpl implements DataConsumer {
 	}
 
 	@Override
-	public void startConsume(int numThreads) {
+	public void startConsume() {
+		int numThreads = 1;
 		Map<String, Integer> topicCountMap = new HashMap<String, Integer>();
 		topicCountMap.put(topic, new Integer(numThreads));
 		Map<String, List<KafkaStream<String, String>>> consumerMap = consumer.createMessageStreams(topicCountMap,
@@ -62,6 +63,7 @@ public class DataConsumerImpl implements DataConsumer {
 			executor.execute(new ConsumerMsgTask(stream, threadNumber, consumerToGetDataMap));
 			threadNumber++;
 		}
+		consumer.commitOffsets();
 	}
 
 	private static ConsumerConfig createConsumerConfig(String a_zookeeper, String a_groupId) {

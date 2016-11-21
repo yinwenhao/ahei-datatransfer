@@ -13,7 +13,7 @@ import java.util.zip.GZIPOutputStream;
 /**
  * GZIP工具
  * 
- * @author when_how
+ * @author yinwenhao
  */
 public abstract class GZipUtils {
 
@@ -84,8 +84,7 @@ public abstract class GZipUtils {
 	 * @param os
 	 * @throws Exception
 	 */
-	public static void compress(InputStream is, OutputStream os)
-			throws Exception {
+	public static void compress(InputStream is, OutputStream os) throws Exception {
 
 		GZIPOutputStream gos = new GZIPOutputStream(os);
 
@@ -169,8 +168,7 @@ public abstract class GZipUtils {
 	 */
 	public static void decompress(File file, boolean delete) throws Exception {
 		FileInputStream fis = new FileInputStream(file);
-		FileOutputStream fos = new FileOutputStream(file.getPath().replace(EXT,
-				""));
+		FileOutputStream fos = new FileOutputStream(file.getPath().replace(EXT, ""));
 		decompress(fis, fos);
 		fis.close();
 		fos.flush();
@@ -188,8 +186,7 @@ public abstract class GZipUtils {
 	 * @param os
 	 * @throws Exception
 	 */
-	public static void decompress(InputStream is, OutputStream os)
-			throws Exception {
+	public static void decompress(InputStream is, OutputStream os) throws Exception {
 
 		GZIPInputStream gis = new GZIPInputStream(is);
 

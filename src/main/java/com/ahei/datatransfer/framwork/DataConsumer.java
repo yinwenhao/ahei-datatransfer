@@ -2,6 +2,6 @@ package com.ahei.datatransfer.framwork;
 
 public interface DataConsumer {
 
-	public void startConsume(int numThreads);
+	public void startConsume();
 
 }

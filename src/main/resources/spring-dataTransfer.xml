@@ -26,10 +26,10 @@
 		<constructor-arg name="metadataBrokerList"
 			value="10.128.8.59:9092,10.128.8.61:9092,10.128.8.62:9092" />
 		<constructor-arg name="serializerClass"
-			value="com.when_how.datatransfer.compress.GzipEncoder" />
+			value="com.ahei.datatransfer.compress.GzipEncoder" />
 		<constructor-arg name="keySerializerClass" value="kafka.serializer.StringEncoder" />
 		<constructor-arg name="partitionerClass"
-			value="com.when_how.datatransfer.kafka.HashPartitioner" />
+			value="com.ahei.datatransfer.kafka.HashPartitioner" />
 		<constructor-arg name="requestRequiredAcks" value="1" />
 	</bean>
 

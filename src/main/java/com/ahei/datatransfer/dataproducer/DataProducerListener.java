@@ -44,7 +44,7 @@ public class DataProducerListener implements InitializingBean {
 		}
 		DataConsumer dataConsumer = new DataConsumerImpl(kafkaZookeeper, kafkaGroupId, kafkaTopic,
 				consumerToGetDataMap);
-		dataConsumer.startConsume(2);
+		dataConsumer.startConsume();
 	}
 
 	@Override
